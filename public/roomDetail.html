@@ -1,0 +1,31 @@
+<h1 class="display-4" ng-bind="$ctrl.room.name || 'Loading…'"></h1>
+<table class="table table-hover" ng-init="enumerate=false;">
+	<thead>
+		<tr>
+			<th ng-if="enumerate">#</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="message in $ctrl.messages">
+			<th scope="row" ng-if="enumerate" ng-bind="$index"></th>
+			<td>
+				<blockquote class="blockquote" ng-class="{'blockquote-reverse': $ctrl.is_own_message(message)}">
+					<p class="m-b-0" ng-bind="message.content"></p>
+					<footer class="blockquote-footer">
+						<cite ng-bind="message.author || 'Unknown'"></cite>
+						<span ng-bind="message.created_at | fromNow"></span>
+					</footer>
+				</blockquote>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<form class="form" name="form" ng-submit="$ctrl.add_message($ctrl.newMessage)">
+	<fieldset class="form-group">
+		<label for="inputMessageContent">Posting as
+			<span ng-bind="$ctrl.User.get_username()"></span>
+		</label>
+		<input type="text" class="form-control" id="inputMessageContent" name="body" placeholder="Enter message" ng-model="$ctrl.newMessage.content" autofocus>
+	</fieldset>
+	<button type="submit" class="btn btn-block btn-primary" name="button">Submit</button>
+</form>

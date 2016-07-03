@@ -1,0 +1,17 @@
+<h1 class="display-4">Channels</h1>
+<table class="table table-hover" ng-init="showKey=false;">
+	<thead class="thead-default">
+		<tr>
+			<th>#</th>
+			<th ng-if="showKey">Key</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="room in $ctrl.rooms">
+			<th scope="row">{{ $index + 1 }}</th>
+			<td ng-if="showKey"><a ng-link="['RoomDetail', {id: room.$id}]">{{ room.$id }}</a></td>
+			<td><a ng-link="['RoomDetail', {id: room.$id}]">{{ room.name }}</a></td>
+		</tr>
+	</tbody>
+</table>

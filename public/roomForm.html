@@ -1,0 +1,8 @@
+<form class="form" name="form" ng-submit="$ctrl.submit($ctrl.newRoom)">
+	<div class="form-group">
+		<label for="inputRoomName">Name</label>
+		<input type="text" class="form-control" id="inputRoomName" name="name" ng-model="$ctrl.newRoom.name" placeholder="Enter name">
+		<small class="text-muted">This is the public display name of the room.</small>
+	</div>
+	<button type="submit" class="btn btn-primary-outline btn-lg" name="button">Create Room</button>
+</form>

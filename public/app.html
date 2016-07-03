@@ -1,0 +1,32 @@
+<div class="container">
+	<nav class="navbar navbar-full navbar-light bg-faded">
+		<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+			&#9776;
+		</button>
+		<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+			<a class="navbar-brand" href="#">Bloc Chat</a>
+			<ul class="nav navbar-nav">
+				<li class="nav-item active">
+					<a class="nav-link" ng-link="['Rooms']">Channels
+						<span class="sr-only">(current)</span>
+					</a>
+				</li>
+			</ul>
+			<div ng-switch="$ctrl.User.is_authenticated()">
+				<div ng-switch-when="true">
+					<form class="form-inline pull-xs-right" ng-submit="$ctrl.logout()">
+						<button class="btn btn-success-outline" type="submit">Sign Out</button>
+					</form>
+				</div>
+				<div ng-switch-when="false">
+					<form class="form-inline pull-xs-right" ng-submit="$ctrl.login(credentials)">
+						<input class="form-control" type="email" placeholder="Email" ng-model="credentials.email" required>
+						<input class="form-control" type="password" placeholder="Password" ng-model="credentials.password" required>
+						<button class="btn btn-success-outline" type="submit">Sign In</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<ng-outlet></ng-outlet>
+</div>
