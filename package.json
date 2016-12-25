@@ -1,0 +1,19 @@
+{
+  "name": "bloc-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Write some tests'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanBalfanz/bloc-chat.git"
+  },
+  "author": "Ryan Balfanz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanBalfanz/bloc-chat/issues"
+  },
+  "homepage": "https://github.com/RyanBalfanz/bloc-chat#readme"
+}
