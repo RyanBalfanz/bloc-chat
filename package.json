@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/RyanBalfanz/bloc-chat/issues"
   },
-  "homepage": "https://github.com/RyanBalfanz/bloc-chat#readme"
+  "homepage": "https://github.com/RyanBalfanz/bloc-chat#readme",
+  "devDependencies": {
+    "firebase-tools": "^3.2.1"
+  }
 }
