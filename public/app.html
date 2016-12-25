@@ -20,8 +20,7 @@
 				</div>
 				<div ng-switch-when="false">
 					<form class="form-inline pull-xs-right" ng-submit="$ctrl.login(credentials)">
-						<input class="form-control" type="email" placeholder="Email" ng-model="credentials.email" required>
-						<input class="form-control" type="password" placeholder="Password" ng-model="credentials.password" required>
+						<input class="form-control" type="text" placeholder="Username" ng-model="credentials.username">
 						<button class="btn btn-success-outline" type="submit">Sign In</button>
 					</form>
 				</div>
