@@ -9,4 +9,4 @@ script:
 install:
   npm install -g firebase-tools
 after_success:
-  test $TRAVIS_NODE_VERSION = "6" && test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN
+  test $TRAVIS_NODE_VERSION = "6" && test $TRAVIS_PULL_REQUEST = "false" && test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN
