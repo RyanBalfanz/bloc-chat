@@ -5,7 +5,8 @@ node_js:
   - "5.11"
   - "iojs"
 script:
-  echo "Deploying!"
+  - npm test
+  - echo "Deploying!"
 install:
   npm install -g firebase-tools
 after_success:
